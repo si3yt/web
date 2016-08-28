@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+<title>麻雀入門</title>
+<meta name-"author" content="作成者" />
+<meta name="keywords" content="麻雀,マージャン,牌,点数,テーブルゲーム,ボードゲーム" />
+<meta name="description" content="麻雀をわかりやすく解説しています。" />
+
+<link href="css/styleReset.css" rel="stylesheet" type="html/css" media="all" />
+<link href="css/styleBar.css" rel="stylesheet" type="html/css" media="all" />
+<link href="css/stylePoints.css" rel="stylesheet" type="html/css" media="all" />
+
+<script type="text/javascript" src="plug/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="plug/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="plug/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="javascript/jsPoints.js"></script>
+<script type="text/javascript" src="javascript/jsBar.js"></script>
+
+</head>
+<body>
+<header id="siteHeader">
+ <div id="headerDiv">
+ <h1>麻雀入門</h1>
+ <div>
+ <nav id="siteNav">
+  <ul>
+   <li><a href="index.html" id="home"><span class="enNav">HOME</span><span class="jpNav">ホーム</span></a></li>
+   <li><a href="ruehl.html" id="ruehl"><span class="enNav">RUEHL</span><span class="jpNav">ルール</span></a></li>
+   <li><a href="hand.html" id="hand"><span class="enNav">HAND</span><span class="jpNav">役</span></a></li>
+   <li id="lastNav"><a href="points.html" id="points"><span class="enNav">POINTS</span><span class="jpNav">点数計算</span></a></li>
+  </ul>
+ </nav> <!-- siteNav -->
+ </div>  <!-- headerDiv -->
+</header> <!-- siteHeader -->
+
+
+<div id="mainContents">
+<h2 id="mainTitle">点数について</h2>
+<p id="mainTitleContents">麻雀では、あがったプレイヤーがその翻数に応じた点数を他のプレイヤーから貰うという点数方式です。<br />
+あがったプレイヤーが親の場合と子の場合で点数割が違います。<br />
+あがったプレイヤーが親の場合は、他のプレイヤーから均等に点数を貰います。つまり、点数が3000点なら、他のプレイヤーから1000点ずつ貰うことになります。<br />
+あがったプレイヤーが子の場合は、親プレイヤーから点数の半分を貰い、他の子プレイヤーからは4分の1の点数を貰います。<br />
+また、4翻以下では符によって点数が変わるため点数計算の他に符計算についても知っておく必要があります。<br />
+符計算を除いてやりたい人のために符計算抜きの点数表も記載しています。これは、親は1500から、子は1000から始まって翻数が増えるに連れて倍になっていき、満貫からは1.5倍ずつ増えていきます。<br />
+下に、符計算ありの親、子のあがりと符計算なし簡易得点表を記載しています。<br /><br />
+<a href="#fukeisan">符計算はこちら</a>
+</p>
+</div> <!-- mainContents-->
+<section id="mainSection">
+<table>
+<caption>親のあがり点数</caption>
+<tr><td class="tableMainCell">符＼翻数</td><td class="tableHand">1</td><td class="tableHand">2</td><td class="tableHand">3</td><td class="tableHand">4</td></tr>
+<tr><td class="tableNumber">20符</td><td>―</td><td>2000<br />700オール</td><td>3900<br />1300オール</td><td>7700<br />2600オール</td></tr>
+<tr><td class="tableNumber">30符</td><td>1500<br />500オール</td><td>2900<br />700オール</td><td>5800<br />2000オール</td><td>11600<br />3900オール</td></tr>
+<tr><td class="tableNumber">40符</td><td>2000<br />700オール</td><td>3900<br />1300オール</td><td>7700<br />2600オール</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">50符</td><td>2400<br />800オール</td><td>4800<br />1600オール</td><td>9600<br />3200オール</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">60符</td><td>2900<br />1000オール</td><td>5800<br />2000オール</td><td>11600<br />3900オール</td><td class="mangan">満貫</td></tr>
+<tr><td class="tableNumber">70符</td><td>3400<br />1200オール</td><td>6800<br />2300オール</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">80符</td><td>3900<br />1300オール</td><td>7700<br />2600オール</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">90符</td><td>4400<br />1500オール</td><td>8700<br />2900オール</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr>
+<tr><td class="tableNumber">100符</td><td>4800<br />1600オール</td><td>9600<br />3200オール</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">110符</td><td>―</td><td>10600<br />3600オール</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr>  
+</table>
+
+<table>
+<caption>子のあがり点数</caption>
+<tr><td class="tableMainCell">符＼翻数</td><td class="tableHand">1</td><td class="tableHand">2</td><td class="tableHand">3</td><td class="tableHand">4</td></tr>
+<tr><td class="tableNumber">20符</td><td>―</td><td>1300<br />400・700</td><td>2600<br />700・1300</td><td>5200<br />1300・2600</td></tr>
+<tr><td class="tableNumber">30符</td><td>1000<br />300・500</td><td>2000<br />500・1000</td><td>3900<br />1000・2000</td><td>7700<br />2000・3900</td></tr>
+<tr><td class="tableNumber">40符</td><td>1300<br />400・700</td><td>2600<br />700・1300</td><td>5200<br />1300・2600</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">50符</td><td>1600<br />400・800</td><td>3200<br />800・1600</td><td>6400<br />1600・3200</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">60符</td><td>2000<br />500・1000</td><td>3900<br />1000・2000</td><td>7700<br />2000・3900</td><td class="mangan">満貫</td></tr>
+<tr><td class="tableNumber">70符</td><td>2300<br />600・1200</td><td>4500<br />1200・2300</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">80符</td><td>2600<br />700・1300</td><td>5200<br />2300・2600</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">90符</td><td>2900<br />800・1500</td><td>5800<br />1500・2900</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr>
+<tr><td class="tableNumber">100符</td><td>3200<br />800・1600</td><td>6400<br />1600・3200</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr> 
+<tr><td class="tableNumber">110符</td><td>―</td><td>7100<br />1800・3600</td><td class="mangan">満貫</td><td class="mangan">満貫</td></tr>  
+</table>
+
+<table>
+<caption>4翻以上のあがり点数</caption>
+<tr><td class="tableMainCell">翻数＼親子</td><td class="tableHand">子のあがり</td><td class="tableHand">親のあがり</td></tr>
+<tr><td class="tableNumber">4～5翻(満貫)</td><td>8000<br />2000・4000</td><td>12000<br />4000オール</td></tr>
+<tr><td class="tableNumber">6～7翻(跳満)</td><td>12000<br />3000・6000</td><td>18000<br />6000オール</td></tr>
+<tr><td class="tableNumber">8～10翻(倍満)</td><td>16000<br />4000・8000</td><td>24000<br />8000オール</td></tr>
+<tr><td class="tableNumber">11～12翻(三倍満)</td><td>24000<br />6000・12000</td><td>36000<br />12000オール</td></tr>
+<tr><td class="tableNumber">13翻以上(役満)</td><td>32000<br />8000・16000</td><td>48000<br />16000オール</td></tr>
+</table>
+
+<table>
+<caption>符計算なし簡易点数表</caption>
+<tr><td class="tableMainCell">翻数＼親子</td><td class="tableHand">子のあがり</td><td class="tableHand">親のあがり</td></tr>
+<tr><td class="tableNumber">1翻</td><td>1000<br />500・300</td><td>1500<br />500オール</td></tr>
+<tr><td class="tableNumber">2翻</td><td>2000<br />500・1000</td><td>3000<br />1000オール</td></tr>
+<tr><td class="tableNumber">3翻</td><td>4000<br />1000・2000</td><td>6000<br />2000オール</td></tr>
+<tr><td class="tableNumber">4～5翻(満貫)</td><td>8000<br />2000・4000</td><td>12000<br />4000オール</td></tr>
+<tr><td class="tableNumber">6～7翻(跳満)</td><td>12000<br />3000・6000</td><td>18000<br />6000オール</td></tr>
+<tr><td class="tableNumber">8～10翻(倍満)</td><td>16000<br />4000・8000</td><td>24000<br />8000オール</td></tr>
+<tr><td class="tableNumber">11～12翻(三倍満)</td><td>24000<br />6000・12000</td><td>36000<br />12000オール</td></tr>
+<tr><td class="tableNumber">13翻以上(役満)</td><td>32000<br />8000・16000</td><td>48000<br />16000オール</td></tr>
+</table>
+
+<h1 id="fukeisan">符計算について</h1>
+<p>符計算とは、点数を算出するのに必要となる符(基本点)を算出するための計算です。<br />
+符計算によって合計符を求めます。そして、点数は符と翻数にひょって決まります。<br />
+基本符、あがり方、面子の種類、雀頭の牌の種類、待ちの形の種類によって決まります。<br />
+下に符計算の早見表を記載しています。</p>
+
+<table id="fuTable">
+<caption>符計算早見表</caption>
+<tr><th class="fuCell">①基本符</th><td colspan="2">20符<br />＜副底(フーテイ)＞</td></tr>
+<tr><th class="fuCell">②アガリ方</th><td>10符<br />＜門前ロン＞</td><td>2符<br />＜ツモ＞</td></tr>
+<tr><th class="fuCell">③各メンツ</th>
+<td>＜2～8(断ヤオ九牌)＞<br />順子:0符<br />明刻:2符<br />暗刻:4符<br />明槓:8符<br />暗槓:16符</td>
+<td>＜一九字牌(ヤオチュー牌)＞<br />順子:0符<br />明刻:4符<br />暗刻:8符<br />明槓:16符<br />暗槓:32符</td><tr>
+<tr><th class="fuCell">④アタマ(雀頭)</th><td colspan="2">2符<br />＜役牌＞</td></tr>
+
+<tr><th class="fuCell">⑤待ちの形</th><td colspan="2">2符<br />＜辺張・嵌張・単騎・ノベタン＞</td></tr>
+<tr id="totalTr"><th id="fuCellTotal">合計符</th><td colspan="2">①＋②＋③＋④＋⑤</td></tr>
+<tr id="exTr"><th id="fuCellEx">例外</th><td>一律20符<br />＜平和ツモ＞</td><td>一律25符<br />＜七対子＞</td></tr>
+</table>
+</section>
+<p id="toPageTop"><a href="#mainContents"><img src="image/pageUp.png" /></a></p>
+<footer id="siteFooter">
+<div id="footerCall"><button type="button" id="buttonCall">問い合わせ</button></div>
+<div id="footerName"><p><small>管理者:Auther</small></p></div>
+
+<div id="overlayForm">
+  <form id="mainForm" action="#" method="post">
+   <h3>問い合わせフォーム</h3>
+   <table>
+    <tr><th id="formName">お名前:</th>
+     <td><input type="text" name="name" class="box" /></td>
+    </tr>
+    <tr><th id="formComment">コメント:</th>
+     <td><textarea name="comment" rows="5" cols="30" class="box"></textarea></td>
+    </tr>
+   </table>
+   <button type="button" id="send">送信</button><br />
+   <!-- <input type="submit" value="送信" /> -->
+  <button type="button" id="buttonClose">CLOSE</button>
+  </form>
+</div>
+
+
+</footer> <!-- siteFooter-->
+</body>
+</html>

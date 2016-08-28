@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TRPG -研究室の野望-</title>
+    <link rel="stylesheet" href="index.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="three.min.js"></script>
+    <script type="text/javascript" src="OrbitControls.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="onload.js"></script>
+    <script type="text/javascript" src="timer.js"></script>
+    <script type="text/javascript" src="sound.js"></script>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="camera.js"></script>
+  </head>
+  <body>
+    <audio src="bgm3.mp3" id="bgm" autoplay loop></audio>
+    <audio src="enemy.mp3" id="btnE"></audio>
+    <audio src="sub.mp3" id="btnS"></audio>
+    <audio src="sword.mp3" id="btnP1"></audio>
+    <audio src="player.mp3" id="btnP2"></audio>
+    <audio src="arrow.mp3" id="btnP3"></audio>
+    <audio src="yes.mp3" id="btnYes"></audio>
+    <audio src="imgAction.mp3" id="btnImg"></audio>
+    <audio src="no.mp3" id="btnNo"></audio>
+    <audio src="clear.mp3" id="btnClear"></audio>
+    <audio src="door.mp3" id="btnDoor"></audio>
+    <audio src="hougyoku.mp3" id="btnHougyoku"></audio>
+    <img id="img1">
+    <img id="img2">
+    <div id="battle">
+      <p>
+      　スペースれんだだ！！！！！
+      </p>
+      <div class="party">
+        <img src="battle/sub1/1.gif" id="sub1"/>
+        <div class="state">
+          たいりょく：<div class="HPBar" id="stateSub1"></div>
+        </div>
+        <img src="battle/main/sword1.gif" id="main"/>
+        <div class="state">
+          たいりょく：<div class="HPBar" id="stateMain"></div>
+        </div>
+        <img src="battle/sub2/1.gif" id="sub2"/>
+        <div class="state">
+          たいりょく：<div class="HPBar" id="stateSub2"></div>
+        </div>
+        <div class="damage" id="damageParty"></div>
+      </div>
+      <div class="enemyArea">
+        <img src="battle/enemy/1.gif" id="enemy"/>
+        <div class="damage" id="damageEnemy"><span id="dEMain"></span><span id="dESub"></span></div>
+        <div class="state">
+          たいりょく：<div class="HPBar" id="stateEnemy"></div>
+        </div>
+      </div>
+    </div> <!-- battle -->
+    <div id="webGL">
+      <video id="camera" autoplay></video>
+      <div id="imageOne">
+        ひとつめのがぞう
+        <canvas id="canvas1"></canvas>
+      </div>
+      <div id="imageTwo">
+        ふたつめのがぞう
+        <canvas id="canvas2"></canvas>
+      </div>
+      <div id="countDown"></div>
+      <div id="patternNone">
+        <div id="dummy1"></div><div id="correct"></div><div id="dummy2"></div>
+      </div>
+      <img src="labNormal.jpg" id="picture"/>
+    </div> <!-- webGL -->]
+    <div class="parson">
+      <div id="timer"></div> <!-- timer -->
+      <div id="player1" class="player">
+        <img src="01.png" id="playerImg1"/>
+          たいりょく：<span class="HP" onclick="war();">ＲＲＲＲＲ</span><br />
+          ちりょく ：<span class="MP">ＷＷＷＷＷ</span><br />
+          せいしん ：<span class="SP">ＳＳＳＳＳ</span><br />
+          ｝ばらんすタイプ
+      </div>
+      <div id="player2" class="player">
+        <img src="02.png" id="playerImg2"/>
+          たいりょく：<span class="HP">ＲＲＲＲＲＲＲＲ</span><br />
+          ちりょく ：<span class="MP">ＷＷ</span><br />
+          せいしん ：<span class="SP">ＳＳＳＳＳ</span><br />
+          ｝たいりょくタイプ
+      </div>
+      <div id="player3" class="player">
+        <img src="03.png" id="playerImg3"/>
+          たいりょく：<span class="HP">ＲＲＲＲ</span><br />
+          ちりょく ：<span class="MP">ＷＷＷＷＷＷＷ</span><br />
+          せいしん ：<span class="SP">ＳＳＳＳ</span><br />
+          ｝ちりょくタイプ
+      </div>
+      <div id="player4" class="player">
+        <img src="04.png" id="playerImg4"/>
+          たいりょく：<span class="HP">ＲＲＲ</span><br />
+          ちりょく ：<span class="MP">ＷＷＷＷＷ</span><br />
+          せいしん ：<span class="SP">ＳＳＳＳＳＳＳ</span><br />
+          ｝せいしんタイプ
+      </div>
+      <div id="player10" class="player">
+        <img src="01.png" id="playerImg10"/>
+          たいりょく：<span class="HP">Ｒ</span><br />
+          ちりょく ：<span class="MP">Ｗ</span><br />
+          せいしん ：<span class="SP">Ｓ</span><br />
+          ｝ちーとタイプ
+      </div>
+      <div class="diceTitle">だいすのめ</div>
+      <div id="dice"></div>
+      <div class="logTitle">たんさくログ</div>
+      <div id="log"></div> <!-- log -->
+    </div> <!-- parson -->
+    <div class="itemTitle">アイテム</div>
+    <div id="item">
+      <div class="itemList">
+        <img src="key.png"/>
+        ひきだしのカギ
+      </div>
+      <div class="itemList">
+        <img src="key.png"/>
+        ロッカーのカギ
+      </div>
+      <div class="itemList">
+        <img src="picture.png"/>
+        ひとつめのがぞう
+      </div>
+      <div class="itemList">
+        <img src="picture.png"/>
+        ふたつめのがぞう
+      </div>
+      <div class="itemList">
+        <img src="piece.png"/>
+        なぞのほうぎょく
+      </div>
+      <div class="itemList itemClear">
+        <img src="sword.png"/>
+        ぎんのつるぎ　
+      </div>
+      <div class="itemList">
+        <img src="axe.png"/>
+        てつのおの　　　
+      </div>
+      <div class="itemList">
+        <img src="arrow.png"/>
+        きのゆみや
+      </div>
+    </div><!-- item -->
+    <div class="modalContents" id="pullKey">
+      <img src="key.png"/>
+      <p>
+        ひきだしのかぎをてにいれた。<br />
+        ひきだしはたしかつくえのちかくにあったような。。。
+      </p>
+    </div><!-- pullKey -->
+    <div class="modalContents" id="rockerKey">
+      <img src="key.png"/><img src="picture.png"/>
+      <p>
+        ロッカーのかぎとひとつめのがぞうをてにいれた。<br />
+        ひきだしはたしかでぐちのちかくにあったような。。。<br />
+        がぞうはなににつかうのだろうか。。。
+      </p>
+    </div><!-- rockerKey -->
+    <div class="modalContents" id="piece">
+      <img src="piece.png"/>
+      <p>
+        なぞのほうぎょくをてにいれた。<br />
+        どこかにはまりそうだけどそんなとこあるかな。。。
+      </p>
+    </div><!-- piece -->
+    <div class="modalContents" id="pictureSecond">
+      <img src="picture.png"/>
+      <p>
+        ふたつめのがぞうをてにいれた。<br />
+        がぞうはなににつかうのだろうか。。。
+      </p>
+    </div><!-- pictureSecond -->
+    <div class="modalContents" id="sword">
+      <img src="sword.png"/>
+      <p>
+        ぎんのつるぎをてにいれた。<br />
+        けんきゅうしつにぶきがおいてあるなんて。。。
+      </p>
+    </div><!-- sword -->
+    <div class="modalContents" id="axe">
+      <img src="axe.png"/>
+      <p>
+        てつのおのをてにいれた。<br />
+        けんきゅうしつにぶきがおいてあるなんて。。。
+      </p>
+    </div><!-- axe -->
+    <div class="modalContents" id="arrow">
+      <img src="arrow.png"/>
+      <p>
+        きのゆみやをてにいれた。<br />
+        けんきゅうしつにぶきがおいてあるなんて。。。
+      </p>
+    </div><!-- arrow -->
+    <div class="modalContents" id="nichika">
+      <div id="nichikaInner" class="modalInner"></div>
+      <p>
+        がぞうをにちかしました。<br />
+        どちらのがぞうもしろくろになりました。
+      </p>
+    </div><!-- nichika -->
+    <div class="modalContents" id="sabun">
+      <div id="sabunInner" class="modalInner"></div>
+      <p>
+        がぞうのさぶんをとりました。<br />
+        ひとつめのがぞうからはいけいがぬけました。
+      </p>
+    </div><!-- sabun -->
+    <div class="modalContents" id="pattern">
+      <div id="patternInner" class="modalInner">
+        <p>
+          ｝１　　　｝２　　　｝３<br />
+        </p>
+      </div>
+      <p>
+        ぶぶんいっちのぱたーんをせんたくしてください。<br />
+        すうじのキーをおすとせんたくできます。<br />
+        まちがってしまうと。。。
+      </p>
+    </div><!-- pattern -->
+  </body>
+</html>

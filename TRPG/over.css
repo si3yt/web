@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body {
+  background-color: #000;
+  font-family: "DragonQuestFC";
+  font-size: 1000%;
+}
+
+.typist {
+  color: #fff;
+  height: auto;
+  text-align: center;
+  width: auto;
+}
+
+div {
+  text-align: center;
+}
+
+a {
+  border: #fff solid 3px;
+  color: #fff;
+  font-size: 30%;
+  display: none;
+  height: auto;
+  padding: 5px 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #000;
+}

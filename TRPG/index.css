@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "DragonQuestFC";
+  font-size: 250%;
+  padding-top: 10px;
+}
+
+#camera {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 0px;
+  width: 0px;
+}
+
+#canvas1, #canvas2 {
+  display: block;
+}
+
+#img1, #img2 {
+  display: none;
+  height: 250px;
+  width: 350px;
+}
+
+#webGL {
+  border: #fff solid 3px;
+  float: left;
+  margin-left: 10px;
+  position: relative;
+}
+
+#webGL > div {
+  display: none;
+}
+
+#webGL #countDown {
+  font-size: 1000%;
+  text-align: center;
+}
+
+#webGL #imageOne {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 300px;
+}
+
+#webGL #imageTwo {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 300px;
+}
+
+#webGL #pattern {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+#webGL #pattern {
+  display: none;
+}
+
+#webGL #picture {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+
+#battle {
+  border: #fff solid 3px;
+  display: none;
+  float: left;
+  margin-left: 10px;
+}
+
+.parson {
+  float: right;
+  width: 330px;
+}
+
+.player {
+  color: #fff;
+  display: none;
+}
+
+.player img {
+  background-color: #fff;
+  display: none;
+  width: 125px;
+}
+
+.HP {
+  color: #dc143c;
+}
+.MP {
+  color: #6495ed;
+}
+.SP {
+  color: #f0e68c;
+}
+
+#timer {
+  font-family: 'Haettenschweiler';
+  color: #fff;
+}
+
+#log {
+  border: #666 solid 3px;
+  margin-top: 5px;
+  height: 400px;
+  width: 300px;
+}
+
+#log input {
+  display: none;
+}
+
+#log input:checked + label{
+  color: #6495ed;
+}
+
+.diceTitle span {
+  cursor: pointer;
+}
+#log span {
+  cursor: pointer;
+}
+
+.diceTitle span:hover {
+  color: #6495ed;
+}
+#log span:hover {
+  color: #6495ed;
+}
+
+#dice {
+  border: #666 solid 3px;
+  font-family: 'Haettenschweiler';
+  height: 50px;
+  margin-top: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+.itemTitle {
+  float: left;
+  margin-left: 10px;
+}
+
+#item {
+  border: #666 solid 3px;
+  clear: left;
+  float: left;
+  height: 97px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#item .itemList {
+  float: left;
+  margin-left: 30px;
+  opacity: 0;
+}
+
+#item .itemClear {
+  clear: left;
+}
+#battle {
+  position: relative;
+}
+
+#battle .damageBig {
+  position: absolute;
+  font-family: 'Haettenschweiler';
+  color: #fff;
+  opacity: 0;
+  text-shadow:
+		-1px -1px #000,
+		1px -1px #000,
+		-1px 1px #000,
+		1px 1px #000;
+  transition: .5s;
+}
+
+#battle p {
+  font-size: 300%;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+#battle .party {
+  float: left;
+  padding: 30px;
+}
+
+#battle img {
+  height: 120px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+#battle .enemyArea {
+  float: right;
+}
+#battle #enemy {
+  padding: 100px;
+  height: 250px;
+}
+
+#battle .state {
+  color: #fff;
+}
+
+#battle .damage {
+  color: #fff;
+  font-family: 'Haettenschweiler';
+}
+
+#battle .HPBar {
+  background-color: #dc143c;
+  border: #fff solid 1px;
+  height: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.modalOverlay {
+    z-index:1;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba(0,0,0,0.75);
+}
+
+.modalContents {
+    position:fixed;
+    display:none;
+    z-index:2;
+    width:30%;
+    margin:0;
+    padding:30px 20px 10px;
+    border:10px solid #fff;
+    background:#000;
+    text-align: center;
+}
+
+.modalContents img {
+  width: 20%;
+}
+
+.modalContents p {
+  color: #fff;
+}
+
+.modalContents .modalInner {
+  color: #fff;
+  display: inline-block;
+  padding: 20px;
+}
+
+.modalContents .modalInner p {
+  margin: 0px 0px 10px;
+}
+
+.modalContents .modalInner canvas {
+  margin-left: 20px;
+  border: 3px solid #fff;
+}
+
+.modalContents .modalInner canvas:first-child {
+  margin-left: 0px;
+}

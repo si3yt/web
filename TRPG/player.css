@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+body {
+  background-color: #000;
+  font-family: "DragonQuestFC";
+  font-size: 250%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 200%;
+  text-align: center;
+  width: auto;
+}
+
+table {
+  border-collapse:separate;
+  border-spacing:40px;
+  margin: auto;
+}
+
+td {
+  color: #fff;
+  width: 500px;
+}
+
+.HP {
+  color: #dc143c;
+}
+.MP {
+  color: #6495ed;
+}
+.SP {
+  color: #f0e68c;
+}
+
+a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  display: none;
+}
+
+input:checked + a {
+  text-decoration: underline;
+}
+
+input:checked + a::before {
+  content: "｝";
+}
+
+img {
+  background-color: #fff;
+  float: left;
+  margin: 0 20px;
+  width: 125px;
+}

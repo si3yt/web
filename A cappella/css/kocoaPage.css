@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+#kocoaPage #imgVideo{
+  float:left;
+  width: 55%;
+  margin-left: 3%;
+}
+
+#kocoaPage #kocoaName{
+  width: 70%;
+  height: 50px;
+  margin-left: 6%;
+  padding: 15px;
+  font-size: 50px;
+  text-align: center;
+  border-left: black solid 20px;
+  border-right: black solid 20px;
+  color: #333;
+}
+
+#kocoaPage #imgVideo #videoKocoa{
+  width: 80%;
+  margin-left: 6%;
+  margin-top: 3%;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  border-radius: 10%;
+  float:left;
+}
+
+#kocoaPage #imgVideo #caption{
+  margin-top: 3%;
+  clear: left;
+  float:right;
+  font-size: 200%;
+  border-bottom: #333 2px solid;
+}
+
+#kocoaPage #imgVideo img{
+  width: 12%;
+  float: left;
+  margin-left: 2%;
+  margin-top: 3%;
+  cursor: pointer;
+  border: 5px solid #fff;
+}
+#kocoaPage #imgVideo img:hover{
+  -webkit-filter: brightness(50%);
+}
+
+#kocoaPage #imgVideo .firstImg{
+  margin-left: 6%;
+  clear:both;
+}
+
+#kocoaPage #kocoaLink{
+  width: 30%;
+  height: 65%;
+  float: right;
+  border: 5px #333 dotted;
+  background-color: #fad09e;
+  text-align: center;
+  position: relative;
+  padding-top: 5%;
+  margin-right: 7%;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.3);
+}
+
+#kocoaPage #kocoaLink #linkTitle{
+  margin-bottom: 7%;
+  font-size: 200%;
+  color: #333;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#kocoaPage #kocoaLink #linkList img{
+  width: 20%;
+  margin: 5%;
+  border-radius: 5%;
+}
+
+#kocoaLink #futter{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+}
+
+#kocoaLink ul li a{
+  text-decoration: none;
+  font-size: 200%;
+  color: #333;
+  line-height: 150%;
+  display: block;
+}
+
+#kocoaLink ul #twitter a{
+  margin-top: 5%;
+  color: #6495ed;
+}
+
+#kocoaLink ul #twitter a:hover{
+  color: #87cefa;
+}
+
+#kocoaLink ul li a:hover{
+  color: #999;
+}
+
+#kocoaPage .scrollUp{
+  text-align: center;
+  font-size: 250%;
+  clear: both;
+  width: 90%;
+  height: ;
+  margin-left: 3.3%;
+  margin-top: 5%;
+  padding: 15px;
+  font-size: 150%;
+  line-height:300%;
+  text-align: center;
+}
+
+#kocoaPage .scrollUp .scrollButtonTop{
+  cursor: pointer;
+}

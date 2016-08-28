@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TRPG -研究室の野望-</title>
+    <link rel="stylesheet" href="player.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="sound.js"></script>
+  </head>
+  <body>
+    <audio src="bgm2.mp3" autoplay loop></audio>
+    <audio src="button2.mp3" id="btn"></audio>
+    <h1>けんきゅういんせんたく</h1>
+    <table>
+      <tr><td><img src="01.png"/>
+        たいりょく：<span class="HP">ＲＲＲＲＲ</span><br />
+        ちりょく ：<span class="MP">ＷＷＷＷＷ</span><br />
+        せいしん ：<span class="SP">ＳＳＳＳＳ</span><br />
+        <input type="radio" name="radio" checked="checked">
+        <a href="index.html?player=1" onmouseover="sound('btn');">ばらんすタイプ</a></td> <!-- バランスタイプ -->
+      <td><img src="02.png"/>
+        たいりょく：<span class="HP">ＲＲＲＲＲＲＲＲ</span><br />
+        ちりょく ：<span class="MP">ＷＷ</span><br />
+        せいしん ：<span class="SP">ＳＳＳＳＳ</span><br />
+        <input type="radio" name="radio">
+        <a href="index.html?player=2" onmouseover="sound('btn');">たいりょくタイプ</a></td></tr> <!-- 体力タイプ -->
+      <tr><td><img src="03.png"/>
+        たいりょく：<span class="HP">ＲＲＲＲ</span><br />
+        ちりょく ：<span class="MP">ＷＷＷＷＷＷＷ</span><br />
+        せいしん ：<span class="SP">ＳＳＳＳ</span><br />
+        <input type="radio" name="radio">
+        <a href="index.html?player=3" onmouseover="sound('btn');">ちりょくタイプ</a></td> <!-- 知力タイプ -->
+      <td><img src="04.png"/>
+        たいりょく：<span class="HP">ＲＲＲ</span><br />
+        ちりょく ：<span class="MP">ＷＷＷＷＷ</span><br />
+        せいしん ：<span class="SP">ＳＳＳＳＳＳＳ</span><br />
+        <input type="radio" name="radio">
+        <a href="index.html?player=4" onmouseover="sound('btn');">せいしんタイプ</a></td></tr> <!-- 精神力タイプ -->
+    </table>
+  </body>
+</html>
