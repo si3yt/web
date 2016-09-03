@@ -1,9 +1,0 @@
-$(function(){
-  $(".scrollButton").click(function(){
-    $.fn.fullpage.moveSectionDown();
-  })
-  $(".scrollButtonTop").click(function(){
-    $.fn.fullpage.moveSectionUp();
-    $.fn.fullpage.moveSectionUp();
-  })
-});
