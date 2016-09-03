@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>麻雀入門</title>
+<meta name-"author" content="作成者" />
+<meta name="keywords" content="麻雀,マージャン,牌,点数,テーブルゲーム,ボードゲーム" />
+<meta name="description" content="麻雀をわかりやすく解説しています。" />
+
+<link rel="stylesheet" href="css/styleReset.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/styleBar.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/styleHand.css" media="screen" title="no title" charset="utf-8">
+
+<script type="text/javascript" src="plug/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="plug/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="plug/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="javascript/jsHand.js"></script>
+<script type="text/javascript" src="javascript/jsBar.js"></script>
+
+</head>
+<body>
+<header id="siteHeader">
+ <div id="headerDiv">
+ <h1>麻雀入門</h1>
+ <div>
+ <nav id="siteNav">
+  <ul>
+   <li><a href="index.html" id="home">ホーム</a></li>
+   <li><a href="ruehl.html" id="ruehl">ルール</a></li>
+   <li><a href="hand.html" id="hand">役</a></li>
+   <li id="lastNav"><a href="points.html" id="points">点数計算</span></a></li>
+  </ul>
+ </nav> <!-- siteNav -->
+ </div>  <!-- headerDiv -->
+</header> <!-- siteHeader -->
+
+
+<div id="mainContents">
+<h2 id="mainTitle">麻雀の役について</h2>
+<p id="mainTitleContents">役とは、アガった時の手牌のパターンで点数を決める基準です。<br />
+役はたくさんあるので初心者は一翻役を覚えて実践を通して覚えていくとよいでしょう。<br />
+役に門前のみと書いてある役は、自分自身が鳴いた場合無効となる役です。<br />
+また、食い下がりと書いてある役は自分自身が鳴いた場合役数が少なくなることを意味しています。<br />
+役一覧には例となる手牌を記載していますので参考にしてください。</p>
+</div> <!-- mainContents-->
+<section id="subSection">
+ <ul id="handCategory">
+  <li>
+   <div class="mainCategory">&nbsp;一翻役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#hand101">&nbsp;立直<span id="small">(リーチ)</span></a></li>
+    <li><a href="#hand102">&nbsp;一発<span id="small">(イッパツ)</span></a></li>
+    <li><a href="#hand103">&nbsp;門前清自模和<span id="small">(メンゼンツモ)</span></a></li>
+    <li><a href="#hand104">&nbsp;断ヤオ九<span id="small">(タンヤオ)</span></a></li>
+    <li><a href="#hand105">&nbsp;平和<span id="small">(ピンフ)</span></a></li>
+    <li><a href="#hand106">&nbsp;一盃口<span id="small">(イーペーコー)</span></a></li>
+    <li><a href="#hand107">&nbsp;役牌<span id="small">(ヤクハイ)</span></a></li>
+    <li><a href="#hand108">&nbsp;嶺上開花<span id="small">(リンシャン)</span></a></li>
+    <li><a href="#hand109">&nbsp;槍槓<span id="small">(チャンカン)</span></a></li>
+    <li><a href="#hand110">&nbsp;海底摸月<span id="small">(ハイテイ)</span></a></li>
+    <li><a href="#hand111">&nbsp;河底撈魚<span id="small">(ホウテイ)</span></a></li>
+    <li><a href="#hand112" class="lastSubCategory">&nbsp;ドラ</a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;二翻役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#hand201">&nbsp;三色同順<span id="small">(サンショク)</span></a></li>
+    <li><a href="#hand202">&nbsp;一気通貫<span id="small">(イッキツウカン)</span></a></li>
+    <li><a href="#hand203">&nbsp;混全帯ヤオ九<span id="small">(チャンタ)</span></a></li>
+    <li><a href="#hand204">&nbsp;七対子<span id="small">(チートイツ)</span></a></li>
+    <li><a href="#hand205">&nbsp;対々和<span id="small">(トイトイ)</span></a></li>
+    <li><a href="#hand206">&nbsp;三暗刻<span id="small">(サンアンコウ)</span></a></li>
+    <li><a href="#hand207">&nbsp;混老頭<span id="small">(ホンロウトウ)</span></a></li>
+    <li><a href="#hand208">&nbsp;三色同刻<span id="small">(サンショクドウコウ)</span></a></li>
+    <li><a href="#hand209">&nbsp;三槓子<span id="small">(サンカンツ)</span></a></li>
+    <li><a href="#hand210">&nbsp;小三元<span id="small">(ショウサンゲン)</span></a></li>
+    <li><a href="#hand211" class="lastSubCategory">&nbsp;ダブル立直<span id="small">(ダブリー)</span></a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;三翻役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#hand301">&nbsp;混一色<span id="small">(ホンイツ)</span></a></li>
+    <li><a href="#hand302">&nbsp;純全帯ヤオ九<span id="small">(ジュンチャン)</span></a></li>
+    <li><a href="#hand303" class="lastSubCategory">&nbsp;二盃口<span id="small">(リャンペーコー)</span></a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;六翻役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#hand601" class="lastSubCategory">&nbsp;清一色<span id="small">(チンイツ)</span></a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;役満<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#handMan1">&nbsp;国士無双<span id="small">(コクシムソウ)</span></a></li>
+    <li><a href="#handMan2">&nbsp;四暗刻<span id="small">(スーアンコウ)</span></a></li>
+    <li><a href="#handMan3">&nbsp;大三元<span id="small">(ダイサンゲン)</span></a></li>
+    <li><a href="#handMan4">&nbsp;字一色<span id="small">(ツーイーソー)</span></a></li>
+    <li><a href="#handMan5">&nbsp;小四喜<span id="small">(ショウスーシー)</span></a></li>
+    <li><a href="#handMan6">&nbsp;大四喜<span id="small">(ダイスーシー)</span></a></li>
+    <li><a href="#handMan7">&nbsp;緑一色<span id="small">(リューイーソー)</span></a></li>
+    <li><a href="#handMan8">&nbsp;清老頭<span id="small">(チンロウトウ)</span></a></li>
+    <li><a href="#handMan9">&nbsp;四槓子<span id="small">(スーカンツ)</span></a></li>
+    <li><a href="#handMan10">&nbsp;九蓮宝燈<span id="small">(チュウレン)</span></a></li>
+    <li><a href="#handMan11">&nbsp;天和<span id="small">(テンホー)</span></a></li>
+    <li><a href="#handMan12" class="lastSubCategory">&nbsp;地和<span id="small">(チーホー)</span></a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;特殊役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#handToku1" class="lastSubCategory">&nbsp;流し満貫<span id="small">(ナガシマンガン)</span></a></li>
+   </ul>
+  </li>
+  <li>
+   <div class="mainCategory">&nbsp;ローカル役<span>▼　</span></div>
+   <ul class="subCategory">
+    <li><a href="#handLow1">&nbsp;人和<span id="small">(レンホウ)</span></a></li>
+    <li><a href="#handLow2">&nbsp;三連刻<span id="small">(サンレンコウ)</span></a></li>
+    <li><a href="#handLow3">&nbsp;四連刻<span id="small">(スーレンコウ)</span></a></li>
+    <li><a href="#handLow4">&nbsp;大車輪<span id="small">(ダイシャリン)</span></a></li>
+    <li><a href="#handLow5" class="lastSubCategory">&nbsp;八連荘<span id="small">(パーレンチャン)</span></a></li>
+   </ul>
+  </li>
+ </ul>
+
+
+</section>　<!-- subSection-->
+<section id="mainSection">
+<h1 id="hand100">一翻役</h1>
+<h2 id="hand101"><span>・</span>立直<span id="small">(リーチ)</span> :門前のみ</h2>
+<p>門前で聴牌した状態で捨牌するとき、リーチ宣言して1000点棒をリーチ棒として出すことで上がったときに成立します。リーチ後は待ちを変えることができません。リーチ棒はその局でアガった人が獲得し、流局時は次の局でアガった人が獲得します。</p>
+<h2 id="hand102"><span>・</span>一発<span id="small">(イッパツ)</span> :門前のみ <span id="small">※アガリ役には含みません</span></h2>
+<p>リーチ宣言をした後一巡以内に上がった場合に成立します。ポン・チー・カン（暗カンを含む）が行われると無効になります。</p>
+<h2 id="hand103"><span>・</span>門前清自模和<span id="small">(メンゼンツモ)</span> :門前のみ</h2>
+<p>門前でツモアガリした場合に成立します。</p>
+<h2 id="hand104"><span>・</span>断ヤオ九<span id="small">(タンヤオチュー)</span> :喰いタンあり</h2>
+<p>2～8の数牌のみの場合に成立します。</p>
+<img src="image/man6.png" class="firstImage"/><img src="image/man7.png" /><img src="image/man8.png" /><img src="image/pin2.png" /><img src="image/pin2.png" /><img src="image/pin2.png" /><img src="image/sou2.png" /><img src="image/sou3.png" /><img src="image/sou4.png" /><img src="image/sou6.png" /><img src="image/sou7.png" /><img src="image/sou6.png" /><img src="image/man4.png" /><img src="image/man4.png" />
+<h2 id="hand105"><span>・</span>平和<span id="small">(ピンフ)</span> :門前のみ</h2>
+<p>面子が４つとも順子で、雀頭が役牌でなく、両面待ちの時に成立します。</p>
+<img src="image/pin1.png" class="firstImage"/><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/sou5.png" /><img src="image/sou6.png" /><img src="image/sou7.png" /><img src="image/man4.png" /><img src="image/man5.png" /><img src="image/man6.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/sou6.png" /><img src="image/sou7.png" />　待ち牌:<img src="image/sou5.png" /><img src="image/sou8.png" />
+<h2 id="hand106"><span>・</span>一盃口<span id="small">(イーペーコー)</span> :門前のみ</h2>
+<p>同じ順子が２組ある場合に成立します。</p>
+<img src="image/sou1.png" class="firstImage"/><img src="image/sou1.png" /><img src="image/sou2.png" /><img src="image/sou2.png" /><img src="image/sou3.png" /><img src="image/sou3.png" /><img src="image/pin5.png" /><img src="image/pin6.png" /><img src="image/pin7.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="hand107"><span>・</span>役牌<span id="small">(ヤクハイ)</span></h2>
+<p>三元牌、自風、場風を総称して役牌と言います。1面子につき1翻となります。自風と場風が重なっている場合は連風牌と言い、1面子で2翻となります。</p>
+<img src="image/ji1.png" class="firstImage"/><img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/sou2.png" /><img src="image/sou2.png" /><img src="image/sou2.png" /><img src="image/pin1.png" /><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/man5.png" /><img src="image/man6.png" /><img src="image/man7.png" /><img src="image/pin9.png" /><img src="image/pin9.png" />　※場風：東
+<h2 id="hand108"><span>・</span>嶺上開花<span id="small">(リンシャンカイホウ)</span></h2>
+<p>カンを行ったときにツモってくる嶺上牌でツモアガリした時に成立します。</p>
+<h2 id="hand109"><span>・</span>槍槓<span id="small">(チャンカン)</span></h2>
+<p>他の人がポンした刻子にツモした牌を1枚加えてカン<span id="small">(小明カン)</span>しようとした時、その牌でロンアガリする時に成立します。この時、カンは成立しないのでカンドラはめくりません。</p>
+<h2 id="hand110"><span>・</span>海底摸月<span id="small">(ハイテイモーユエ)</span></h2>
+<p>局最後のツモ(海底)されたハイによりツモアガリした時に成立します。</p>
+<h2 id="hand111"><span>・</span>河底撈魚<span id="small">(ホウテイラオユエ)</span></h2>
+<p>局最後のツモ(海底)されたハイによりツモアガリした時に成立します。</p>
+<h2 id="hand112"><span>・</span>ドラ <span id="small">※アガリ役には含みません</span></h2>
+<p>その局のドラ、カンドラ、裏ドラ、赤ドラが手牌に含まれる時に翻が加算されます。</p>
+
+<h1 id="hand200">二翻役</h1>
+<h2 id="hand201"><span>・</span>三色同順<span id="small">(サンショクドウジュン)</span> :食い下がり一翻</h2>
+<p>3種類の色（万子・索子・筒子）それぞれに、同じ数字の並びの順子がある場合に成立します。</p>
+<img src="image/man2.png" class="firstImage"/><img src="image/man3.png" /><img src="image/man4.png" /><img src="image/sou2.png" /><img src="image/sou3.png" /><img src="image/sou4.png" /><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/pin4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji6.png" /><img src="image/ji6.png" />
+<h2 id="hand202"><span>・</span>一気通貫<span id="small">(イッキツウカン)</span> :食い下がり一翻</h2>
+<p>同種（同色）の数牌で、123、456、789、の順子がある場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man4.png" /><img src="image/man5.png" /><img src="image/man6.png" /><img src="image/man7.png" /><img src="image/man8.png" /><img src="image/man9.png" /><img src="image/pin4.png" /><img src="image/pin4.png" /><img src="image/pin4.png" /><img src="image/ji7.png" /><img src="image/ji7.png" />
+<h2 id="hand203"><span>・</span>混全帯ヤオ九<span id="small">(ホンチャンタイヤオチュー)</span> :食い下がり一翻</h2>
+<p>４つの面子と雀頭すべてにヤオ九牌（1・9と字牌）が含まれている場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/pin7.png" /><img src="image/pin8.png" /><img src="image/pin9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji6.png" /><img src="image/ji6.png" />
+<h2 id="hand204"><span>・</span>七対子<span id="small">(チートイツ)</span> :門前のみ</h2>
+<p>対子が７組ある場合に成立します。同牌が４枚ある場合には成立しません。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man8.png" /><img src="image/man8.png" /><img src="image/pin3.png" /><img src="image/pin3.png" /><img src="image/sou5.png" /><img src="image/sou5.png" /><img src="image/sou7.png" /><img src="image/sou7.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="hand205"><span>・</span>対々和<span id="small">(トイトイ)</span></h2>
+<p>４つの面子すべてが刻子（槓子）の場合に成立します。</p>
+<img src="image/man2.png" class="firstImage"/><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man8.png" /><img src="image/man8.png" /><img src="image/man8.png" /><img src="image/ji1.png" /><img src="image/ji1.png" />　ポン:<img src="image/sou7.png" /><img src="image/sou7.png" /><img src="image/sou7.png" />　<img src="image/sou1.png" /><img src="image/sou1.png" /><img src="image/sou1.png" />
+<h2 id="hand206"><span>・</span>三暗刻<span id="small">(サンアンコウ)</span></h2>
+<p>暗刻（暗槓）が３つある場合に成立します。ロンの場合、アガリ牌を含む刻子は暗刻とみなされないことに注意が必要です。</p>
+<img src="image/man3.png" class="firstImage"/><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou2.png" /><img src="image/sou3.png" /><img src="image/sou4.png" /><img src="image/ji2.png" /><img src="image/ji2.png" />
+<h2 id="hand207"><span>・</span>混老頭<span id="small">(ホンロウトウ)</span></h2>
+<p>すべての牌がヤオ九牌（1・9と字牌）だけの場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man1.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/sou1.png" /><img src="image/sou1.png" /><img src="image/sou1.png" /><img src="image/pin9.png" /><img src="image/pin9.png" />　ポン:<img src="image/ji3.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="hand208"><span>・</span>三色同刻<span id="small">(サンショクドウコウ)</span></h2>
+<p>３種類の色（万子・索子・筒子）それぞれに、同じ数字の刻子（槓子）がある場合に成立します。</p>
+<img src="image/man3.png" class="firstImage"/><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/sou3.png" /><img src="image/sou3.png" /><img src="image/sou3.png" /><img src="image/sou7.png" /><img src="image/sou8.png" /><img src="image/sou9.png" /><img src="image/ji4.png" /><img src="image/ji4.png" />　ポン:<img src="image/pin3.png" /><img src="image/pin3.png" /><img src="image/pin3.png" />
+<h2 id="hand209"><span>・</span>三槓子<span id="small">(サンカンツ)</span></h2>
+<p>槓子（暗刻・明刻いずれでも可）が３つある場合に成立します。</p>
+<img src="image/man3.png" class="firstImage"/><img src="image/man4.png" /><img src="image/man5.png" /><img src="image/sou3.png" /><img src="image/sou3.png" />　カン:<img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou6.png" />　<img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" />　<img src="image/pin3.png" /><img src="image/pin3.png" /><img src="image/pin3.png" /><img src="image/pin3.png" />
+<h2 id="hand210"><span>・</span>小三元<span id="small">(ショウサンゲン)</span></h2>
+<p>三元牌（白・發・中）のいずれか１つを雀頭とし、残り２種類を刻子（槓子）とした場合に成立します。</p>
+<img src="image/man5.png" class="firstImage"/><img src="image/man6.png" /><img src="image/man7.png" /><img src="image/sou3.png" /><img src="image/sou4.png" /><img src="image/sou5.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /><img src="image/ji7.png" /><img src="image/ji7.png" />
+<h2 id="hand211"><span>・</span>ダブル立直<span id="small">(ダブルリーチ)</span> :門前のみ</h2>
+<p>自分の最初の捨牌でリーチ宣言して、上がったときに成立します。</p>
+<h1 id="hand300">三翻役</h1>
+<h2 id="hand301"><span>・</span>混一色<span id="small">(ホンイーソウ)</span> :食い下がり二翻</h2>
+<p>万子、索子、筒子のどれか一種類の牌と、字牌だけの場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man5.png" /><img src="image/man5.png" /><img src="image/man5.png" /><img src="image/man7.png" /><img src="image/man8.png" /><img src="image/man9.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="hand301"><span>・</span>純全帯ヤオ九<span id="small">(ジュンチャンタイヤオチュー)</span> :食い下がり二翻</h2>
+<p>４つのメンツと雀頭すべてに老頭牌（1・9）が含まれる場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/pin1.png" /><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/pin9.png" /><img src="image/pin9.png" />
+<h2 id="hand301"><span>・</span>二盃口<span id="small">(リャンペーコー)</span> :門前のみ</h2>
+<p>同じ順子が２組という組み合わせが２つある場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/pin5.png" /><img src="image/pin5.png" /><img src="image/pin6.png" /><img src="image/pin6.png" /><img src="image/pin7.png" /><img src="image/pin7.png" /><img src="image/ji6.png" /><img src="image/ji6.png" />
+<h1 id="hand600">六翻役</h1>
+<h2 id="hand601"><span>・</span>清一色<span id="small">(チンイーソー)</span> :食い下がり五翻</h2>
+<p>万子、索子、筒子のどれか一種類の牌だけの場合に成立します。</p>
+<img src="image/pin1.png" class="firstImage"/><img src="image/pin1.png" /><img src="image/pin1.png" /><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/pin4.png" /><img src="image/pin5.png" /><img src="image/pin5.png" /><img src="image/pin5.png" /><img src="image/pin6.png" /><img src="image/pin7.png" /><img src="image/pin8.png" /><img src="image/pin9.png" /><img src="image/pin9.png" />
+<h1 id="handMan0">役満</h1>
+<h2 id="handMan1"><span>・</span>国士無双<span id="small">(コクシムソウ)</span> :門前のみ</h2>
+<p>13種類すべてのヤオ九牌（1・9と字牌）が最低１枚ずつあり、そのうちのどれか１種類が２枚ある場合に成立します。聴牌時に13種類すべてのヤオ九牌が１枚ずつあり、ヤオ九牌ならどれでも上がれる場合（13面待ち）はダブル役満となります。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man9.png" /><img src="image/pin1.png" /><img src="image/pin9.png" /><img src="image/sou1.png" /><img src="image/sou9.png" /><img src="image/ji1.png" /><img src="image/ji2.png" /><img src="image/ji3.png" /><img src="image/ji4.png" /><img src="image/ji5.png" /><img src="image/ji6.png" /><img src="image/ji7.png" /><img src="image/ji7.png" />
+<h2 id="handMan2"><span>・</span>四暗刻<span id="small">(スーアンコウ)</span> :門前のみ</h2>
+<p>暗刻（暗槓）が４つある場合に成立します．ロンの場合、アガリ牌を含む刻子は暗刻とみなされないことに注意が必要です。単騎待ちの場合はダブル役満となります。</p>
+<img src="image/man3.png" class="firstImage"/><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/pin9.png" /><img src="image/pin9.png" /><img src="image/pin9.png" /><img src="image/sou5.png" /><img src="image/sou5.png" /><img src="image/sou5.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/pin7.png" /><img src="image/pin7.png" />
+<h2 id="handMan3"><span>・</span>大三元<span id="small">(ダイサンゲン)</span></h2>
+<p>三元牌（白・發・中）の３種類すべてが刻子（槓子）である場合に成立します。</p>
+<img src="image/man3.png" class="firstImage"/><img src="image/man4.png" /><img src="image/man5.png" /><img src="image/pin9.png" /><img src="image/pin9.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /><img src="image/ji6.png" /> ポン:<img src="image/ji7.png" /><img src="image/ji7.png" /><img src="image/ji7.png" />
+<h2 id="handMan4"><span>・</span>字一色<span id="small">(ツーイーソー)</span></h2>
+<p>すべての牌が字牌である場合に成立します。</p>
+<img src="image/ji1.png" class="firstImage"/><img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji5.png" /><img src="image/ji7.png" /><img src="image/ji7.png" /><img src="image/ji7.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="handMan5"><span>・</span>小四喜<span id="small">(ショウスーシー)</span></h2>
+<p>風牌（東・南・西・北）のうち３種が刻子（槓子）で、残りの１種が雀頭か刻子（槓子）である場合に成立します。</p>
+<img src="image/ji1.png" class="firstImage"/><img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji3.png" /><img src="image/ji3.png" /><img src="image/ji3.png" /><img src="image/man7.png" /><img src="image/man7.png" /><img src="image/man7.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="handMan6"><span>・</span>大四喜<span id="small">(ダイスーシー)</span></h2>
+<p>四喜和のうち、風牌（東・南・西・北）の４種類すべてが刻子（槓子）である場合に成立します。</p>
+<img src="image/ji1.png" class="firstImage"/><img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji2.png" /><img src="image/ji3.png" /><img src="image/ji3.png" /><img src="image/ji3.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/ji4.png" /><img src="image/sou3.png" /><img src="image/sou3.png" />
+<h2 id="handMan7"><span>・</span>緑一色<span id="small">(リューイーソー)</span></h2>
+<p>索子の23468と字牌の發のみである場合に成立します。</p>
+<img src="image/sou2.png" class="firstImage"/><img src="image/sou2.png" /><img src="image/sou3.png" /><img src="image/sou3.png" /><img src="image/sou4.png" /><img src="image/sou4.png" /><img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou6.png" /><img src="image/sou8.png" /><img src="image/sou8.png" /><img src="image/sou8.png" /><img src="image/ji5.png" /><img src="image/ji5.png" />
+<h2 id="handMan8"><span>・</span>清老頭<span id="small">(チンロウトウ)</span></h2>
+<p>すべての牌が老頭牌（1・9）だけである場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man1.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/pin1.png" /><img src="image/pin1.png" /><img src="image/pin1.png" /><img src="image/pin9.png" /><img src="image/pin9.png" /><img src="image/pin9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" />
+<h2 id="handMan9"><span>・</span>四槓子<span id="small">(スーカンツ)</span></h2>
+<p>槓子（暗槓・明槓いずれでも可）が４つある場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" />　カン:<img src="image/man7.png" /><img src="image/man7.png" /><img src="image/man7.png" /><img src="image/man7.png" />　<img src="image/pin2.png" /><img src="image/pin2.png" /><img src="image/pin2.png" /><img src="image/pin2.png" />　<img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" /><img src="image/sou9.png" />　<img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/ji1.png" /><img src="image/ji1.png" />
+<h2 id="handMan10"><span>・</span>九蓮宝燈<span id="small">(チューレンポウトー)</span> :門前のみ</h2>
+<p>万子、索子、筒子のどれか一種類の牌だけで、1112345678999の牌とさらに１枚1～9の牌を追加した牌形である場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man1.png" /><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man4.png" /><img src="image/man5.png" /><img src="image/man6.png" /><img src="image/man7.png" /><img src="image/man8.png" /><img src="image/man8.png" /><img src="image/man9.png" /><img src="image/man9.png" /><img src="image/man9.png" />
+<h2 id="handMan11"><span>・</span>天和<span id="small">(テンホウ)</span> :門前のみ</h2>
+<p>親の配牌の時点で既にアガリ形になっている場合に成立します。</p>
+<h2 id="handMan12"><span>・</span>地和<span id="small">(チーホウ)</span> :門前のみ</h2>
+<p>子の最初のツモでツモアガリした場合に成立します．そのツモの前にポン・チー・カン（暗カンを含む）が行われると無効になります。</p>
+<h1 id="handToku0">特殊役</h1>
+<h2 id="handToku1"><span>・</span>流し満貫<span id="small">(ナガシマンガン)</span> :満貫</h2>
+<p>局開始から流局まで、ヤオ九牌を捨て続けた場合に成立します．アガリ役ではなく、相手が満貫分の点数を失った後、通常通り流局の手順を行います．他の役とも一切複合しません．万一複数の人に同時に流し満貫が成立した場合は、相殺され誰も点数を失いません。</p>
+<h1 id="handLow0">ローカル役 <span id="small">※この他にもローカル役は存在します</span></h1>
+<h2 id="handLow1"><span>・</span>人和<span id="small">(レンホウ)</span></h2>
+<p>子が最初のツモより前に、他家の捨牌でロンアガリした場合に成立します．他の役とは複合せず、他に役がある場合、より高い方が適用されます。満貫、倍満、跳満、三倍満、役満などルールによって様々な扱いになります。</p>
+<h2 id="handLow2"><span>・</span>三連刻<span id="small">(サンレンコウ)</span> :二翻</h2>
+<p>同色の刻子（槓子）３つが連番である場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man1.png" /><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/sou4.png" /><img src="image/sou5.png" /><img src="image/sou6.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="handLow3"><span>・</span>四連刻<span id="small">(スーレンコウ)</span> :役満</h2>
+<p>同色の刻子（槓子）４つが連番である場合に成立します。</p>
+<img src="image/man1.png" class="firstImage"/><img src="image/man1.png" /><img src="image/man1.png" /><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man2.png" /><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/man3.png" /><img src="image/man4.png" /><img src="image/man4.png" /><img src="image/man4.png" /><img src="image/ji3.png" /><img src="image/ji3.png" />
+<h2 id="handLow4"><span>・</span>大車輪<span id="small">(ダイシャリン)</span> :役満　:門前のみ</h2>
+<p>筒子のみの七対子ですべて連番になっている場合に成立します．1～7、2～8、3～9いずれの連番でも成立します。</p>
+<img src="image/pin2.png" class="firstImage"/><img src="image/pin2.png" /><img src="image/pin3.png" /><img src="image/pin3.png" /><img src="image/pin4.png" /><img src="image/pin4.png" /><img src="image/pin5.png" /><img src="image/pin5.png" /><img src="image/pin6.png" /><img src="image/pin6.png" /><img src="image/pin7.png" /><img src="image/pin7.png" /><img src="image/pin8.png" /><img src="image/pin8.png" />
+<h2 id="handLow5"><span>・</span>八連荘<span id="small">(パーレンチャン)</span> :役満　<span id="small">※アガリ役には含みません</span></h2>
+<p>８回以上連続して上がった場合に成立します．流局した場合は連荘してもアガリではないため、八連荘は無効になります。</p>
+
+</section> <!-- mainSection -->
+
+<p id="toPageTop"><a href="#mainContents"><img src="image/pageUp.png" /></a></p>
+
+<footer id="siteFooter">
+<div id="footerCall"><button type="button" id="buttonCall">問い合わせ</button></div>
+<div id="footerName"><p><small>管理者:Auther</small></p></div>
+
+<div id="overlayForm">
+  <form id="mainForm" action="#" method="post">
+   <h3>問い合わせフォーム</h3>
+   <table>
+    <tr><th id="formName">お名前:</th>
+     <td><input type="text" name="name" class="box" /></td>
+    </tr>
+    <tr><th id="formComment">コメント:</th>
+     <td><textarea name="comment" rows="5" cols="30" class="box"></textarea></td>
+    </tr>
+   </table>
+   <button type="button" id="send">送信</button><br />
+   <!-- <input type="submit" value="送信" /> -->
+  <button type="button" id="buttonClose">CLOSE</button>
+  </form>
+</div>
+
+
+</footer> <!-- siteFooter-->
+</body>
+</html>

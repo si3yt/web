@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+
+#siteHeader{
+	padding-top:10px;
+	height:40px;
+	width:100%;
+	background:-webkit-linear-gradient(left,rgba(153,204,153,1),rgba(255,255,255,1) 10%);
+	background:-mor-linear-gradient(left,rgba(153,204,153,1),rgba(255,255,255,1) 10%);
+	background:-o-linear-gradient(left,rgba(153,204,153,1),rgba(255,255,255,1) 10%);
+	background:linear-gradient(to right,rgba(153,204,153,1),rgba(255,255,255,1) 10%);
+	border-bottom:#ccc 1px solid;
+	position:fixed;
+	z-index:2;
+	min-width:600px;
+}
+#headerDiv{
+	width:100%;
+}
+#siteHeader h1{
+	font-size:160%;
+	float:left;
+	margin-right:70px;
+	margin-left:50px;
+	margin-top:5px;
+	font-family:'HG行書体',monospace;
+}
+#siteHeader #siteNav{
+	padding-top:5px;
+	left:200px;
+}
+#siteHeader ul{
+
+}
+#siteHeader li{
+	float:left;
+	font-size:90%;
+	border-left:#ccc 1px solid;
+}
+#siteHeader a{
+	display:block;
+	width:120px;
+	height:20px;
+	text-align:center;
+	text-decoration:none;
+	margin-bottom:3px;
+	padding-top:5px;
+	color:#000;
+	background:rgba(255,255,255,0);
+	-webkit-transition:background 1s,color 1s;
+	-moz-transition:background 1s,color 1s;
+	-o-transition:background 1s,color 1s;
+	-ms-transition:background 1s,color 1s;
+	transition:background 1s,color 1s;
+	font-family:'HG行書体',monospace;
+	border-radius:10px;
+	font-size:16px;
+}
+#siteHeader a:hover{
+	color:#000;
+	background:rgba(153,204,153,0.8);
+	text-shadow:3px 3px 4px #999;
+}
+#siteHeader span.enNav{display:inline;}
+#siteHeader a:hover span.enNav{display:none;}
+#siteHeader span.jpNav{display:none;}
+#siteHeader a:hover span.jpNav{display:inline;}
+
+#siteHeader #lastNav{
+	border-right:#ccc 1px solid;
+}
+
+#siteFooter{
+	border-top:#ccc 1px solid;
+	height:80px;
+	background-color:#000;
+	clear:both;
+	min-width:600px;
+}
+#siteFooter p{
+	color:#fff;
+}
+#siteFooter #footerName{
+	margin:30px 30px 0px;
+	float:right;
+}
+#siteFooter #footerCall{
+	margin:25px 45px 0px;
+	float:right;
+	padding:0px;
+}
+#siteFooter #buttonCall{
+	color:#fff;
+	background-color:#000;
+	border:#ccc 1px solid;
+	font-size:18px;
+	margin-top:5px;
+	font-family:'HG行書体',monospace;
+	border-radius:10px;
+	outline:none;
+	cursor:pointer;
+}
+
+#siteFooter #overlayForm{
+        display: none;
+        width: 100%;
+        height:100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background: rgba(0,0,0,0.7);
+}
+
+#siteFooter #mainForm{
+	height:235px;
+	width:350px;
+	background-color:#eee;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+        border-radius: 5px;
+	padding:0px 0 20px 20px;
+	box-shadow:0 0 15px inset;
+}
+#siteFooter #mainForm #buttonClose{
+	margin-top:15px;
+	margin-left:290px;
+        background:#eee;
+        color:#000;
+        width:70px;
+        font-size: 10px;
+        padding:5px;
+        border-radius:10px;
+        cursor:pointer;
+	box-shadow:0 0 10px #000;
+	font-family:'HG行書体',monospace;
+	outline:none;
+}
+#siteFooter #mainForm #formComment{
+	vertical-align:top;
+}
+#siteFooter #mainForm #formName{
+	text-align:center;
+}
+#siteFooter #mainForm tr{
+	height:40px;
+}
+#siteFooter #mainForm #send{
+        background: #eee;
+        color: #000;
+        width: 70px;
+	margin-top:30px;
+	margin-left:125px;
+        font-size: 10px;
+        padding:5px;
+        border-radius: 10px;
+        cursor: pointer;
+	box-shadow:1px 1px 2px #000;
+	font-family:'HG行書体',monospace;
+	outline:none;
+}
+#siteFooter #mainForm .box{
+	width:250px;
+}
+#siteFooter h3{
+	width:150px;
+	margin-bottom:20px;
+	padding-top:20px;
+	border-bottom:#000 1px dotted;
+}
